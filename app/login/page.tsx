@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import AuthForm from "../components/authForm";
+import AuthForm from "../components/authFormBadge";
 import Link from "next/link";
 
 const Login: React.FC = () => {
@@ -35,11 +35,6 @@ const Login: React.FC = () => {
         ) : (
           <>
             <AuthForm mode="Login" onSubmit={handleLogin} />
-            <Link href="/password/signup">
-              <p className="text-center text-blue-500 font-bold underline py-4">
-                Create a new account
-              </p>
-            </Link>
           </>
         )}
         {message && (
