@@ -8,9 +8,14 @@ export default function Home() {
           Welcome to my Next.ts Portfolio
         </h1>
         <div className="flex flex-col space-y-4">
-          <Link href="/login">
+          <Link href="/loginFacebookBadge">
             <p className="bg-white border border-blue-500 text-blue-600 font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white">
-              Login
+              Login Facebook Badge
+            </p>
+          </Link>
+          <Link href="/loginStripeBadge">
+            <p className="bg-white border border-blue-500 text-blue-600 font-bold py-2 px-4 rounded hover:bg-blue-400 hover:text-white">
+              Login Stripe Badge
             </p>
           </Link>
           <Link href="/navbar">

@@ -9,7 +9,7 @@ interface AuthFormProps {
   resetForm?: boolean;
 }
 
-const AuthFacebookBadge: React.FC<AuthFormProps> = ({
+const LoginFacebookBadge: React.FC<AuthFormProps> = ({
   mode,
   onSubmit,
   resetForm,
@@ -90,4 +90,4 @@ const AuthFacebookBadge: React.FC<AuthFormProps> = ({
   );
 };
 
-export default AuthFacebookBadge;
+export default LoginFacebookBadge;

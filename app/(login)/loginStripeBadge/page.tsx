@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import AuthFacebookBadge from "../components/authFacebookBadge";
-import Link from "next/link";
+import LoginStripeBadge from "../components/loginStripeBadge";
 
 const Login: React.FC = () => {
   const [message, setMessage] = useState("");
@@ -34,7 +33,7 @@ const Login: React.FC = () => {
           </p>
         ) : (
           <>
-            <AuthFacebookBadge mode="Login" onSubmit={handleLogin} />
+            <LoginStripeBadge mode="Login" onSubmit={handleLogin} />
           </>
         )}
         {message && (
