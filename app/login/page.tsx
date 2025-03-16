@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import AuthForm from "../components/authFormBadge";
+import AuthFacebookBadge from "../components/authFacebookBadge";
 import Link from "next/link";
 
 const Login: React.FC = () => {
@@ -34,7 +34,7 @@ const Login: React.FC = () => {
           </p>
         ) : (
           <>
-            <AuthForm mode="Login" onSubmit={handleLogin} />
+            <AuthFacebookBadge mode="Login" onSubmit={handleLogin} />
           </>
         )}
         {message && (
