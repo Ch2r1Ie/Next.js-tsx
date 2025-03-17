@@ -31,9 +31,9 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <h2 className="text-gray-600 text-3xl mb-2 text-center">Login</h2>
+      <h2 className="text-gray-950 text-3xl mb-2 text-center">Login</h2>
       <div>
-        <label className="text-gray-700 dark:text-gray-300">Email</label>
+        <label className="text-gray-950 dark:text-gray-300">Email</label>
         <input
           type="email"
           value={email}
@@ -43,10 +43,10 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
         />
       </div>
       <div>
-        <label className="text-gray-700 dark:text-gray-300 text-left flex items-center justify-between">
+        <label className="text-gray-950 dark:text-gray-300 text-left flex items-center justify-between">
           <p>Password</p>
           <Link href="/password/forgotten">
-            <p className="text-blue-500 hover:underline">
+            <p className="text-blue-700 hover:underline">
               Forgot your password?
             </p>
           </Link>
@@ -59,12 +59,21 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
           className="mt-1 p-3 w-full text-center border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 hover:border-2 hover:border-blue-600"
         />
       </div>
+      <div className="mt-4 flex items-center">
+        <input
+          type="checkbox"
+          className="w-4 h-4 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2"
+        />
+        <label className="ml-2 text-sm text-gray-600 dark:text-gray-300">
+          Remember me on this device
+        </label>
+      </div>
       <div className="mt-8">
         <button
           type="submit"
           className="w-full py-2 mb-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
         >
-          Login
+          Sign in
         </button>
 
         <div className="flex items-center">

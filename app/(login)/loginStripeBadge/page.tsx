@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import LoginStripeBadge from "../components/loginStripeBadge";
+import StripeSecurityNotice from "../components/stripeSecurityNotice";
+import StripeFooter from "../components/stripeFooter";
 
 const Login: React.FC = () => {
   const [message, setMessage] = useState("");
@@ -25,33 +27,34 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div
-      className="flex items-center justify-center min-h-screen min-w-[300px] bg-gray-100 dark:bg-gray-900 overflow-auto animate-bg-scroll"
-      style={{
-        backgroundImage: "url('/assets/sea-background.jpg')",
-        backgroundSize: "cover",
-        backgroundRepeat: "repeat-y",
-      }}
-    >
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-md">
-        {isSuccessful ? (
-          <p className="text-green-500 text-center text-lg font-semibold">
-            Welcome!
-          </p>
-        ) : (
-          <>
-            <LoginStripeBadge mode="Login" onSubmit={handleLogin} />
-          </>
-        )}
-        {message && (
-          <p
-            className={`text-center mt-4 ${
-              isSuccess ? "text-green-500" : "text-red-500"
-            }`}
-          >
-            {message}
-          </p>
-        )}
+    <div className="min-h-screen min-w-[300px] overflow-auto">
+      <div
+        className="flex flex-col items-center mt-30"
+        style={
+          {
+            // backgroundImage: "url('/assets/sea-background.jpg')",
+            // backgroundSize: "cover",
+            // backgroundRepeat: "repeat-y",
+          }
+        }
+      >
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-2xl w-full max-w-md">
+          {isSuccessful ? (
+            <p className="text-green-500 text-center text-lg font-semibold">
+              Welcome!
+            </p>
+          ) : (
+            <div>
+              <LoginStripeBadge mode="Login" onSubmit={handleLogin} />
+            </div>
+          )}
+        </div>
+        <div className="p-6  w-full max-w-md">
+          <StripeSecurityNotice />
+        </div>
+      </div>
+      <div>
+        <StripeFooter />
       </div>
     </div>
   );
