@@ -74,17 +74,14 @@ const LoginFacebookBadge: React.FC<AuthFormProps> = ({
             Forgotten password?
           </p>
         </Link>
-
         <div className="flex items-center">
           <div className="flex-grow border-t border-gray-300"></div>
           <span className="mx-4 text-gray-500">or</span>
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
-        <Link href="/password/signup">
-          <button className="mt-4 mb-4 w-full py-2 bg-emerald-500 font-bold text-white rounded-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50 dark:bg-emerald-700 dark:hover:bg-emerald-600">
-            Create New Account
-          </button>
-        </Link>
+        <button className="mt-4 mb-4 w-full py-2 bg-emerald-500 font-bold text-white rounded-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50 dark:bg-emerald-700 dark:hover:bg-emerald-600">
+          Create New Account
+        </button>
       </div>
     </form>
   );
