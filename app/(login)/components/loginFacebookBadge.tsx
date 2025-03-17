@@ -10,7 +10,6 @@ interface AuthFormProps {
 }
 
 const LoginFacebookBadge: React.FC<AuthFormProps> = ({
-  mode,
   onSubmit,
   resetForm,
 }) => {
