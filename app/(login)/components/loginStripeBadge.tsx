@@ -31,13 +31,9 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <h2 className="text-2xl font-bold mb-2 text-center p-4">
-        Sign in to your account
-      </h2>
+      <h2 className="text-gray-600 text-3xl mb-2 text-center">Login</h2>
       <div>
-        <label className="text-gray-700 dark:text-gray-300 font-bold">
-          Email
-        </label>
+        <label className="text-gray-700 dark:text-gray-300">Email</label>
         <input
           type="email"
           value={email}
@@ -47,7 +43,7 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
         />
       </div>
       <div>
-        <label className="text-gray-700 dark:text-gray-300 text-left flex items-center justify-between font-bold">
+        <label className="text-gray-700 dark:text-gray-300 text-left flex items-center justify-between">
           <p>Password</p>
           <Link href="/password/forgotten">
             <p className="text-blue-500 hover:underline">
@@ -66,7 +62,7 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
       <div className="mt-8">
         <button
           type="submit"
-          className="w-full py-2 bg-blue-500 font-bold text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+          className="w-full py-2 mb-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
         >
           Login
         </button>
@@ -77,7 +73,7 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
         <Link href="/password/signup">
-          <button className="mt-4 mb-4 w-full py-2 bg-emerald-500 font-bold text-white rounded-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50 dark:bg-emerald-700 dark:hover:bg-emerald-600">
+          <button className="mt-4 mb-4 w-full py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50 dark:bg-emerald-700 dark:hover:bg-emerald-600">
             Create New Account
           </button>
         </Link>
