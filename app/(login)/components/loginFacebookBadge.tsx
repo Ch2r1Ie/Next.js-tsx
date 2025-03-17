@@ -10,6 +10,7 @@ interface AuthFormProps {
 }
 
 const LoginFacebookBadge: React.FC<AuthFormProps> = ({
+  mode,
   onSubmit,
   resetForm,
 }) => {
@@ -66,7 +67,7 @@ const LoginFacebookBadge: React.FC<AuthFormProps> = ({
           type="submit"
           className="w-full py-2 bg-blue-500 font-bold text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
         >
-          Login
+          {mode}
         </button>
         <Link href="/password/forgotten">
           <p className="text-center text-blue-500 font-bold py-4 hover:underline hover:underline-offset-2">
