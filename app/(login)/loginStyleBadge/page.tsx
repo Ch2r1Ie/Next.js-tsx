@@ -4,9 +4,9 @@ import { FaCube } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="bg-[#E6E6FA] flex items-center justify-center h-screen">
-      <div className="flex w-3/4 max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
-        <div className="w-1/2 p-8">
+    <div className="fixed inset-0 flex items-center justify-center bg-[#E6E6FA] overflow-auto">
+      <div className="flex w-3/4 max-w-3xl bg-white rounded-lg shadow-lg min-w-[400px] overflow-auto">
+        <div className="w-full md:w-1/2 p-8">
           <div className="flex items-center mb-6">
             <span className="font-bold text-xl flex items-center">
               <FaCube className="mr-2 size-5" /> TheCube Factory
@@ -81,12 +81,12 @@ const Login = () => {
           </p>
         </div>
 
-        <div className="w-1/2 relative">
-          <div className="absolute inset-0 bg-purple-200 opacity-100 ">
-            <img src="assets/abstract-pop.jpg" />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center mt-70">
-            <img src="assets/abstract-pop.jpg" />
+        <div className="w-0 md:w-1/2 relative overflow-hidden hidden md:block">
+          <div className="absolute inset-0 bg-purple-200 opacity-100">
+            <img
+              src="assets/abstract-pop.jpg"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
