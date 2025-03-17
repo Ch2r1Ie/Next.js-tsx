@@ -12,9 +12,7 @@ const Login = () => {
               <FaCube className="mr-2 size-5" /> TheCube Factory
             </span>
           </div>
-
           <h2 className="text-2xl font-semibold mb-4">Welcome back</h2>
-
           <form>
             <div className="mb-4">
               <label
@@ -54,10 +52,7 @@ const Login = () => {
                   Remember for 30 days
                 </span>
               </label>
-              <a
-                href="#"
-                className="inline-block align-baseline font-bold text-sm text-indigo-600 hover:text-indigo-800"
-              >
+              <a className="inline-block align-baseline font-bold text-sm text-indigo-600 hover:text-indigo-800">
                 Forgot password
               </a>
             </div>
@@ -72,10 +67,7 @@ const Login = () => {
 
           <p className="text-center mt-4">
             Don't have an account?{" "}
-            <a
-              href="#"
-              className="font-bold text-indigo-600 hover:text-indigo-800"
-            >
+            <a className="font-bold text-indigo-600 hover:text-indigo-800">
               Sign up
             </a>
           </p>
