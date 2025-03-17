@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import { FaCube } from "react-icons/fa";
 
@@ -74,8 +75,11 @@ const Login = () => {
         </div>
         <div className="w-0 md:w-1/2 relative overflow-hidden hidden md:block">
           <div className="absolute inset-0 bg-purple-200 opacity-100">
-            <img
-              src="assets/abstract-pop.jpg"
+            <Image
+              src="/assets/abstract-pop.jpg"
+              alt="Abstract Pop"
+              width={500}
+              height={500}
               className="w-full h-full object-cover"
             />
           </div>
