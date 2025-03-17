@@ -80,7 +80,6 @@ const Login = () => {
             </a>
           </p>
         </div>
-
         <div className="w-0 md:w-1/2 relative overflow-hidden hidden md:block">
           <div className="absolute inset-0 bg-purple-200 opacity-100">
             <img
