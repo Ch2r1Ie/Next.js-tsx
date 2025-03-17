@@ -5,13 +5,13 @@ import { useState, FormEvent, useEffect } from "react";
 
 interface AuthFormProps {
   mode: "Signup" | "Login";
-  onSubmit: (data: { email: string; password: string }) => void;
+  // onSubmit: (data: { email: string; password: string }) => void;
   resetForm?: boolean;
 }
 
 const LoginFacebookBadge: React.FC<AuthFormProps> = ({
   mode,
-  onSubmit,
+  // onSubmit,
   resetForm,
 }) => {
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ const LoginFacebookBadge: React.FC<AuthFormProps> = ({
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    onSubmit({ email, password });
+    // onSubmit({ email, password });
   };
 
   return (

@@ -1,30 +1,32 @@
 "use client";
-import { useState } from "react";
+// import { useState } from "react";
 import LoginStripeBadge from "../components/loginStripeBadge";
 import StripeSecurityNotice from "../components/stripeSecurityNotice";
 import StripeFooter from "../components/stripeFooter";
 
 const Login: React.FC = () => {
-  const [message, setMessage] = useState("");
-  const [isSuccessful, setIsSuccessful] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  // const [message, setMessage] = useState("");
+  // const [isSuccessful, setIsSuccessful] = useState(false);
+  // const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleLogin = async (data: { email: string; password: string }) => {
-    const res = await fetch("/api/auth/password/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    const result = await res.json();
-    setMessage(result.message);
+  // const handleLogin = async (data: { email: string; password: string }) => {
+  //   const res = await fetch("/api/auth/password/login", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(data),
+  //   });
+  //   const result = await res.json();
+  //   setMessage(result.message);
 
-    if (res.status === 200) {
-      setIsSuccessful(true);
-      setIsSuccess(true);
-    } else {
-      setIsSuccess(false);
-    }
-  };
+  //   if (res.status === 200) {
+  //     setIsSuccessful(true);
+  //     setIsSuccess(true);
+  //   } else {
+  //     setIsSuccess(false);
+  //   }
+  // };
+
+  const isSuccessful = true;
 
   return (
     <div className="min-h-screen min-w-[300px] overflow-auto">
@@ -45,7 +47,7 @@ const Login: React.FC = () => {
             </p>
           ) : (
             <div>
-              <LoginStripeBadge mode="Login" onSubmit={handleLogin} />
+              <LoginStripeBadge mode="Login" />
             </div>
           )}
         </div>

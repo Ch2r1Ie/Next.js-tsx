@@ -1,28 +1,30 @@
 "use client";
-import { useState } from "react";
+// import { useState } from "react";
 import LoginFacebookBadge from "../components/loginFacebookBadge";
 
 const Login: React.FC = () => {
-  const [message, setMessage] = useState("");
-  const [isSuccessful, setIsSuccessful] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  // const [message, setMessage] = useState("");
+  // const [isSuccessful, setIsSuccessful] = useState(false);
+  // const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleLogin = async (data: { email: string; password: string }) => {
-    const res = await fetch("/api/auth/password/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    const result = await res.json();
-    setMessage(result.message);
+  // const handleLogin = async (data: { email: string; password: string }) => {
+  //   const res = await fetch("/api/auth/password/login", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(data),
+  //   });
+  //   const result = await res.json();
+  //   setMessage(result.message);
 
-    if (res.status === 200) {
-      setIsSuccessful(true);
-      setIsSuccess(true);
-    } else {
-      setIsSuccess(false);
-    }
-  };
+  //   if (res.status === 200) {
+  //     setIsSuccessful(true);
+  //     setIsSuccess(true);
+  //   } else {
+  //     setIsSuccess(false);
+  //   }
+  // };
+
+  const isSuccessful = true;
 
   return (
     <div className="flex items-center justify-center min-h-screen min-w-[300px] bg-gray-100 dark:bg-gray-900 overflow-auto">
@@ -33,10 +35,10 @@ const Login: React.FC = () => {
           </p>
         ) : (
           <>
-            <LoginFacebookBadge mode="Login" onSubmit={handleLogin} />
+            <LoginFacebookBadge mode="Login" />
           </>
         )}
-        {message && (
+        {/* {message && (
           <p
             className={`text-center mt-4 ${
               isSuccess ? "text-green-500" : "text-red-500"
@@ -44,7 +46,7 @@ const Login: React.FC = () => {
           >
             {message}
           </p>
-        )}
+        )} */}
       </div>
     </div>
   );

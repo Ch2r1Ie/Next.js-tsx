@@ -5,13 +5,13 @@ import { useState, FormEvent, useEffect } from "react";
 
 interface AuthFormProps {
   mode: "Signup" | "Login";
-  onSubmit: (data: { email: string; password: string }) => void;
+  // onSubmit: (data: { email: string; password: string }) => void;
   resetForm?: boolean;
 }
 
 const LoginStripeBadge: React.FC<AuthFormProps> = ({
   mode,
-  onSubmit,
+  // onSubmit,
   resetForm,
 }) => {
   const [email, setEmail] = useState("");
@@ -26,12 +26,12 @@ const LoginStripeBadge: React.FC<AuthFormProps> = ({
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    onSubmit({ email, password });
+    // onSubmit({ email, password });
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <h2 className="text-gray-950 text-3xl mb-2 text-center">Login</h2>
+      <h2 className="text-gray-950 text-3xl mb-2 text-center">{mode}</h2>
       <div>
         <label className="text-gray-950 dark:text-gray-300">Email</label>
         <input
