@@ -5,9 +5,9 @@ import { FaCube } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-[#E6E6FA] overflow-auto">
-      <div className="flex w-3/4 max-w-3xl bg-white rounded-lg shadow-lg min-w-[200px] overflow-auto">
-        <div className="w-full md:w-1/2 p-8">
+    <div className="flex items-center justify-center min-h-screen bg-[#E6E6FA] p-6">
+      <div className="flex flex-col md:flex-row w-full max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="w-full md:w-1/2 p-6 md:p-8">
           <div className="flex items-center mb-6">
             <span className="font-bold text-xl flex items-center">
               <FaCube className="mr-2 size-5" /> TheCube Factory
@@ -25,21 +25,21 @@ const Login = () => {
               <input
                 type="email"
                 id="email"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Enter your email"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="password"
-                className="block text-gray-700 text-sm mb-2 "
+                className="block text-gray-700 text-sm mb-2"
               >
                 Password
               </label>
               <input
                 type="password"
                 id="password"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outlin"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Enter your password"
               />
             </div>
@@ -53,36 +53,33 @@ const Login = () => {
                   Remember for 30 days
                 </span>
               </label>
-              <a className="inline-block align-baseline font-bold text-sm text-indigo-600 hover:text-indigo-800">
-                Forgot password
+              <a className="text-sm font-bold text-indigo-600 hover:text-indigo-800 cursor-pointer">
+                Forgot password?
               </a>
             </div>
-            <button className="bg-[#6A5ACD] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4 hover:bg-[#483D8B] hover:border-zinc-800">
+            <button className="bg-[#6A5ACD] text-white font-bold py-2 px-4 rounded w-full hover:bg-[#483D8B] focus:ring-2 focus:ring-indigo-500">
               Sign in
             </button>
-            <button className="bg-white border border-gray-400 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full flex items-center justify-center space-x-2 hover:border-zinc-800">
-              <FcGoogle className="mr-2 size-5"></FcGoogle>
+            <button className="mt-4 bg-white border border-gray-400 text-gray-700 font-bold py-2 px-4 rounded w-full flex items-center justify-center hover:border-gray-600 focus:ring-2 focus:ring-gray-300">
+              <FcGoogle className="mr-2 size-5" />
               <span>Sign in with Google</span>
             </button>
           </form>
-
           <p className="text-center mt-4">
             Don't have an account?{" "}
-            <a className="font-bold text-indigo-600 hover:text-indigo-800">
+            <span className="font-bold text-indigo-600 hover:text-indigo-800 cursor-pointer">
               Sign up
-            </a>
+            </span>
           </p>
         </div>
-        <div className="w-0 md:w-1/2 relative overflow-hidden hidden md:block">
-          <div className="absolute inset-0 bg-purple-200 opacity-100">
-            <Image
-              src="/assets/abstract-pop.jpg"
-              alt="Abstract Pop"
-              width={500}
-              height={500}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="hidden md:block md:w-1/2 relative">
+          <Image
+            src="/assets/abstract-pop.jpg"
+            alt="Abstract Pop"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-r-lg"
+          />
         </div>
       </div>
     </div>
