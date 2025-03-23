@@ -13,7 +13,7 @@ export default function Home() {
             { href: "/loginStripeBadge", label: "[Login] Stripe Badge" },
             { href: "/loginStyleBadge", label: "[Login] Style Badge" },
             { href: "/navbar", label: "[Navbar]" },
-            { href: "/sidebar", label: "[Sidebar]" },
+            { href: "/shadcn", label: "[Sidebar]" },
           ].map(({ href, label }) => (
             <Link key={href} href={href}>
               <p className="bg-white border border-blue-500 text-blue-600 font-bold py-2 px-4 rounded transition hover:bg-blue-500 hover:text-white cursor-pointer">

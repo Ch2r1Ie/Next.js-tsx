@@ -1,26 +1,18 @@
 import {
-  Calculator,
-  Calendar,
   CreditCard,
   Settings,
-  Smile,
   User,
   Inbox,
   BellRing,
-  icons,
   Cookie,
   MessageSquare,
 } from "lucide-react";
 
 import {
   Command,
-  CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 
 interface SideBarItem {
@@ -58,7 +50,6 @@ export function SideBarCommand() {
           icon: <CreditCard />,
           text: "Billing",
         },
-
         {
           link: "/",
           icon: <BellRing />,
@@ -71,17 +62,17 @@ export function SideBarCommand() {
       items: [
         {
           link: "/",
-          icons: <Settings />,
+          icon: <Settings />,
           text: "General Setting",
         },
         {
           link: "/",
-          icons: <Cookie />,
+          icon: <Cookie />,
           text: "Privacy",
         },
         {
           link: "/",
-          icons: <MessageSquare />,
+          icon: <MessageSquare />,
           text: "Logs",
         },
       ],
@@ -89,19 +80,23 @@ export function SideBarCommand() {
   ];
 
   return (
-    <Command>
-      <CommandList>
-        {menuList.map((menu: any, key: number) => (
-          <CommandGroup key={key} heading={menu.group}>
-            {menu.items.map((option: any, optionKey: number) => (
-              <CommandItem key={optionKey} className="glex gap-2">
-                {option.icon}
-                {option.text}
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        ))}
-      </CommandList>
-    </Command>
+    <div className="grow">
+      <Command>
+        <CommandList>
+          {menuList.map((sideBarItems: SideBarItems, key: number) => (
+            <CommandGroup key={key} heading={sideBarItems.group}>
+              {sideBarItems.items.map(
+                (sideBarItem: SideBarItem, optionKey: number) => (
+                  <CommandItem key={optionKey} className="glex gap-2">
+                    {sideBarItem.icon}
+                    {sideBarItem.text}
+                  </CommandItem>
+                )
+              )}
+            </CommandGroup>
+          ))}
+        </CommandList>
+      </Command>
+    </div>
   );
 }
