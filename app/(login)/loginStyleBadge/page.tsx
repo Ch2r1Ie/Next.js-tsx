@@ -6,7 +6,7 @@ import { FaCube } from "react-icons/fa";
 const Login = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#E6E6FA] overflow-auto">
-      <div className="flex w-3/4 max-w-3xl bg-white rounded-lg shadow-lg min-w-[400px] overflow-auto">
+      <div className="flex w-3/4 max-w-3xl bg-white rounded-lg shadow-lg min-w-[200px] overflow-auto">
         <div className="w-full md:w-1/2 p-8">
           <div className="flex items-center mb-6">
             <span className="font-bold text-xl flex items-center">
