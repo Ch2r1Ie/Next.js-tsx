@@ -7,8 +7,8 @@ const UserItems = () => {
         <p>GD</p>
       </div>
       <div className="grow">
-        <p className="text-[16px] font-bold">Shadcn</p>
-        <p className="text-[16px] text-neutral-500">shadcn@gmail.com</p>
+        <p className="text-[12px] font-bold">Shadcn</p>
+        <p className="text-[12px] text-neutral-500">shadcn@gmail.com</p>
       </div>
     </div>
   );

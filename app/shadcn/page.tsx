@@ -7,10 +7,12 @@ import Header from "./header/header";
 const page = () => {
   return (
     <body className="flex items-start justify-between">
-      <SideBar />
-      <main className="grid w-full h-full pl-[300px]">
+      <div>
+        <SideBar />
+      </div>
+      <div className="grid w-full h-full pl-[300px]">
         <Header />
-      </main>
+      </div>
     </body>
   );
 };
